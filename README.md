@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## WIKIFINDER DEMO
 
-## Getting Started
+WikiFinder es un videojuego web por rondas en el que se nos presenta un articulo aleatorio de Wikipedia, con un temporizador de 1, 3 o 5 minutos, dependiendo del modo de juego. . A partir del articulo presentado al iniciar la partida debemos encontrar un segundo articulo, tambien designado por el juego aleatoriamente, sin la opcion de usar el buscador, solo navegando a traves de los links que contenga el articulo inicial de la ronda. (Ej: Llegar del articulo de "La sociedad de la nieve" al articulo de "Lionel Messi".) En caso de lograrlo en el tiempo designado, el jugador suma 1 punto y pasa a la
+siguiente ronda con un nuevo articulo a encontrar. En caso de no lograrlo en el tiempo designado, se acaba la partida. El jugador puede elegir si publicar o no su puntuacion de manera publica al ranking global.
 
-First, run the development server:
+En esta demo solo está disponible el modo de partidas de 5 minutos.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Caracterısticas principales
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+El juego se basa en los siguientes pilares:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# Planteamiento sencillo :
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+El objetivo del juego es sencillo, sin embargo requiere habilidad y conocimiento general de los temas aleatorios que salen en cada ronda, lo que generara una sensacion de satisfacción en el jugador cada vez que este logre encontrar el articulo designado en sus partidas.
 
-## Learn More
+Exploración y Descubrimiento: WikiFinder fomenta la exploración activa de la información presentada en los artículos de Wikipedia. Los jugadores deben navegar por los enlaces dentro de los artículos para descubrir el segundo artículo objetivo. Este aspecto del juego promueve la curiosidad y el deseo de aprender mientras los jugadores descubren nuevos temas y conceptos a través de la exploración de Wikipedia.
 
-To learn more about Next.js, take a look at the following resources:
+# Desarrollo de Habilidades de Búsqueda :
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+WikiFinder proporciona una plataforma para que los jugadores desarrollen y mejoren sus habilidades de búsqueda y navegación en la web. Al limitar el uso del buscador y requerir que los jugadores encuentren el artículo objetivo dentro de un tiempo limitado, el juego desafía a los jugadores a utilizar estrategias efectivas de búsqueda y a navegar de manera eficiente por los enlaces de Wikipedia para alcanzar su objetivo. Esta habilidad puede ser beneficiosa no solo dentro del juego, sino también en contextos de búsqueda y navegación en la vida cotidiana en línea.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+# Competitividad:
 
-## Deploy on Vercel
+En comparacion a otros juegos similares como Higher or Lower, WikiFinder tiene un factor competitivo mas
+levado, al requerir conocimientos de cultura general la suerte
+tiene un menor impacto en la puntuación
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Tecnologías usadas para el desarrollo
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Next.js
+Node.js
+Typescript
+Javascript
+WikiMedia API
+
+## BRAULIO ROSARIO
