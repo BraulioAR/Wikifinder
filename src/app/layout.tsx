@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils" // Importa la función cn
+import Header from "./components/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,8 +19,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="es"> 
       <body className={cn(inter.className, "bg-background text-foreground min-h-screen")}> {/* Aplica clases de Tailwind y min-h-screen */}
+        <Header /> {/* Renderiza el componente Header */}
         {children}
         <footer className="w-full py-4 bg-card mt-auto"> {/* Footer dentro del layout, bg-card para el fondo */}
           <div className='flex justify-center'>

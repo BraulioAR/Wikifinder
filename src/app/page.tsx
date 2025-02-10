@@ -75,8 +75,8 @@ export default function Home() {
   };
 
 
-     return (
-    <main className="flex flex-col items-center justify-center min-h-screen py-20 bg-[url('/bg.webp')] bg-cover">
+  return (
+    <main className="flex flex-col items-center justify-center min-h-screen pt-40 py-20 bg-[url('/bg.webp')] bg-cover">
       <div className="fixed top-0 left-0 w-full h-full flex justify-between"> {/* Contenedor para publicidad */}
         <div className="w-1/6 h-4/5 bg-gray-300 mx-4 self-center"> {/* Ejemplo de espacio para publicidad izquierda */}
           {/* Aquí va tu publicidad izquierda */}
@@ -118,7 +118,7 @@ export default function Home() {
         )}
         <div className="relative z-10 h-full flex flex-col justify-between ">
           <div className='bottom-0'>
-            <h2 className="text-3xl font-semibold text-secondary">{mode.name}</h2>
+            <h2 className="text-3xl font-semibold text-secondary text-white">{mode.name}</h2>
           </div>
           <div className=" w-full bg-black/50 p-2 rounded-md transition-transform duration-300 ease-in-out translate-y-full group-hover:translate-y-0"> {/* Detalles con transición */}
             <p className="text-muted-foreground mb-2">{mode.description}</p>
@@ -133,16 +133,16 @@ export default function Home() {
           {/* Botones con hover effects */}
           <div className=" flex flex-col gap-4 pt-8 mb-8">
                <Button 
-        className="bg-primary hover:bg-accent transition-colors duration-300 w-full py-8"
+        className="bg-primary hover:bg-accent transition-colors duration-300 text-2xl w-full py-8"
         onClick={handlePlayClick} // Manejador de clic para jugar
       >
         Jugar Ahora
       </Button> 
             <Link href="/settings" className="w-full">
-              <Button variant="secondary" className="hover:bg-accent transition-colors duration-300 w-full py-8">Configuración</Button>
+              <Button variant="secondary" className=" text-2xl hover:bg-accent transition-colors duration-300 w-full py-8">⚙️ Configuración</Button>
             </Link>
-             <Button variant="outline" className="hover:bg-primary/20 transition-colors duration-300 w-full py-8" onClick={handleOpenInstructionsModal}>
-          Ayuda
+             <Button variant="outline" className=" text-2xl hover:bg-primary/20 transition-colors duration-300 w-full py-8" onClick={handleOpenInstructionsModal}>
+          ❓ Ayuda
         </Button>
           </div>
         </Card>
