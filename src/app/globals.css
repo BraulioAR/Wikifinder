@@ -1,46 +1,115 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https: //fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 255, 255, 255;
-  --background-end-rgb: 255, 255, 255;
+  --primary-green: 141 65% 45%;
+  /* Verde Césped */
+  --secondary-blue: 211 100% 50%;
+  /* Azul Deportivo */
+  --highlight-yellow: 51 100% 50%;
+  /* Amarillo Destacado */
+  --dark-bg: 0 0% 7%;
+  /* Negro Elegante */
+  --light-text: 0 0% 98%;
+  /* Blanco Claro */
+
+  --background: var(--dark-bg);
+  --foreground: var(--light-text);
+  --card: var(--dark-bg);
+  --card-foreground: var(--light-text);
+  --popover: var(--dark-bg);
+  --popover-foreground: var(--light-text);
+  --primary: var(--primary-green);
+  --primary-foreground: var(--light-text);
+  --secondary: var(--secondary-blue);
+  --secondary-foreground: var(--light-text);
+  --muted: 0 0% 20%;
+  --muted-foreground: 0 0% 65%;
+  --accent: var(--highlight-yellow);
+  --accent-foreground: var(--dark-bg);
+  --border: 0 0% 20%;
+  --input: 0 0% 20%;
+  --ring: var(--primary-green);
+  --radius: 0.5rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.dark {
+  --background: var(--dark-bg);
+  --foreground: var(--light-text);
+  --card: var(--dark-bg);
+  --card-foreground: var(--light-text);
+  --popover: var(--dark-bg);
+  --popover-foreground: var(--light-text);
+  --primary: var(--primary-green);
+  --primary-foreground: var(--light-text);
+  --secondary: var(--secondary-blue);
+  --secondary-foreground: var(--light-text);
+  --muted: 0 0% 14.9%;
+  --muted-foreground: 0 0% 63.9%;
+  --accent: var(--highlight-yellow);
+  --accent-foreground: var(--dark-bg);
+  --border: 0 0% 14.9%;
+  --input: 0 0% 14.9%;
+  --ring: var(--primary-green);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
   }
 }
 
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f9f9f9;
+/* 🎨 Estilos Personalizados */
+.btn {
+  @apply px-4 py-2 rounded-lg font-bold transition-all;
 }
 
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
+.btn-primary {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
 }
 
-
-
-
-button {
-  margin: auto;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+.btn-primary:hover {
+  background-color: hsl(var(--secondary));
 }
 
-button:hover {
-  background-color: #0056b3;
+.btn-secondary {
+  background-color: hsl(var(--secondary));
+  color: hsl(var(--secondary-foreground));
+}
+
+.btn-secondary:hover {
+  background-color: hsl(var(--accent));
+  color: hsl(var(--accent-foreground));
+}
+
+.card {
+  @apply bg-card text-card-foreground p-4 rounded-lg shadow-md;
+}
+
+h1 {
+  font-size: 2rem;
+  color: hsl(var(--primary));
+}
+
+h2 {
+  font-size: 1.75rem;
+  color: hsl(var(--secondary));
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: hsl(var(--accent));
+}
+
+.font-handwritten {
+  font-family: 'Palmer', cursive;
+  /* Usa el nombre de la fuente que importaste */
 }
